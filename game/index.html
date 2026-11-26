@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Pelican Post — Island Mail Run</title>
+    <style>
+      html,
+      body {
+        margin: 0;
+        padding: 0;
+        height: 100%;
+        overflow: hidden;
+        background: #0a141f;
+      }
+      canvas {
+        display: block;
+      }
+      #boot {
+        position: fixed;
+        inset: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: #cfe7f4;
+        font:
+          600 15px system-ui,
+          'Segoe UI',
+          sans-serif;
+        letter-spacing: 0.08em;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="boot">WARMING UP THE PELICAN…</div>
+    <canvas id="game"></canvas>
+    <script type="module">
+      // Hide the boot note as soon as the game module takes over.
+      document.getElementById('boot').remove();
+    </script>
+    <script type="module" src="src/main.js"></script>
+  </body>
+</html>
